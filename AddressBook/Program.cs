@@ -10,7 +10,12 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book Program");
+           
+            AddressBook contact = new AddressBook();
+            contact.addContact("Neeladri", "pulakala", "D.No:619", "Srikakulam", "Andhrapradesh", "532312", "7382158874", "neela22@gmail.com");
+            contact.showList();
+
+            Console.ReadKey();
         }
     }
 }
