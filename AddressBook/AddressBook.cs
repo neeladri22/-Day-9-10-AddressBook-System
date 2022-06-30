@@ -19,7 +19,7 @@ namespace AddressBook
             Contact newContact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
             this.ContactList.Add(newContact);
         }
-        public void showList()
+        public void printDetails()
         {
             foreach (var contact in ContactList)
             {
