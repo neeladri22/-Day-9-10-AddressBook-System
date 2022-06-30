@@ -11,9 +11,14 @@ namespace AddressBook
         static void Main(string[] args)
         {
             AddressBook addressBook = new AddressBook();
-            takeInputAndAddToContacts(addressBook);
-            takeInputAndAddToContacts(addressBook);
-             addressBook.print();
+            
+            Console.WriteLine("Enter how many contacts you want to add");
+            int number = Convert.ToInt32(Console.ReadLine());
+            for (int number_i = 1; number_i <= number; number_i++)
+            {
+                takeInputAndAddToContacts(addressBook);
+            }
+            addressBook.print();
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -23,6 +28,8 @@ namespace AddressBook
                     string firstNameOfContactToBeEdited = Console.ReadLine();
                     Console.WriteLine("Enter LastName of Contact to be edited");
                     string lastNameOfContactToBeEdited = Console.ReadLine();
+                    addressBook.edit(firstNameOfContactToBeEdited, lastNameOfContactToBeEdited);
+
                     break;
                 case 2:
                     Console.WriteLine("Enter FirstName of Contact to be deleted");
@@ -37,6 +44,7 @@ namespace AddressBook
             }
             Console.ReadLine();
         }
+       
         public static void takeInputAndAddToContacts(AddressBook addressBook)
         {
             Console.WriteLine("Enter FirstName");
@@ -52,10 +60,9 @@ namespace AddressBook
             Console.WriteLine("Enter Zip");
             int zip = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter PhoneNumber");
-            long phoneNumber = Convert.ToInt32(Console.ReadLine());
+            long phoneNumber = long.Parse(Console.ReadLine());
             Console.WriteLine("Enter Email id");
             string email = Console.ReadLine();
-
             addressBook.addContacts(firstName, lastName, address, city, state, zip, phoneNumber, email);
             Console.ReadLine();
         }
