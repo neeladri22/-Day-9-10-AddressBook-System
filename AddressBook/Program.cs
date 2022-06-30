@@ -10,7 +10,6 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-           
             Console.WriteLine("--Add Contact Details--");
 
             Console.WriteLine("First Name:");
@@ -29,9 +28,9 @@ namespace AddressBook
             string phoneNumber = Console.ReadLine();
             Console.WriteLine("Email Address:");
             string email = Console.ReadLine();
-           
-            
+
             Console.ReadKey();
+
         }
     }
 }

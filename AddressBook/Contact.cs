@@ -33,9 +33,9 @@ namespace AddressBook
         public string Address { get ; set; }
         public string City { get; set; }
         public string State { get ; set; }
-        public string Zip { get => zip; set => zip = value; }
-        public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
-        public string Email { get => email; set => email = value; }
+        public string Zip { get; set; }
+        public string PhoneNumber { get ; set ; }
+        public string Email { get ; set ; }
 
 
     }
